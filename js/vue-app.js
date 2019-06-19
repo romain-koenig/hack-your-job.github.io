@@ -5,75 +5,42 @@ new Vue({
   data: {
     filtering: '',
     selectedCity: null,
-    cities: baggerData.cities,
-    baggers: baggerData.speakers,
-    baggersFilteredCount: baggerData.speakers.length,
+    cities: data.cities,
+    skills: data.skills,
+    members: data.members,
+    membersFilteredCount: data.members.length,
     contact: {
       success: false,
       error: null,
-      bagger: null,
+      member: null,
       email: null,
       title: null,
       body: null
     }
   },
   computed: {
-    displayedBaggers: function(){
-      var filtered = this.filtered(this.baggers);
-      return filtered.sort(function(bagger1, bagger2){
-        return bagger1.name.localeCompare(bagger2.name);
+    displayedMembers: function(){
+      var filtered = this.filtered(this.members);
+      return filtered.sort(function(member1, member2){
+        return member1.name.localeCompare(member2.name);
       })
     }
   },
   methods: {
-    // Filter baggers list
-    filtered: function(baggers) {
+    filtered: function(members) {
       if (this.filtering === '' && !this.selectedCity) {
-        this.baggersFilteredCount = baggers.length;
-        return baggers;
+        this.membersFilteredCount = members.length;
+        return members;
       }
       var filter = this.filtering.toLowerCase();
-      var filteredList = baggers.filter(function(bagger) {
-        if (this.selectedCity && bagger.cities.indexOf(this.selectedCity) === -1) {
+      var filteredList = members.filter(function(member) {
+        if (this.selectedCity && member.cities.indexOf(this.selectedCity) === -1) {
           return false;
         }
-        return JSON.stringify(bagger).toLowerCase().indexOf(filter) > -1;
+        return JSON.stringify(member).toLowerCase().indexOf(filter) > -1;
       }.bind(this));
-      this.baggersFilteredCount = filteredList.length;
+      this.membersFilteredCount = filteredList.length;
       return filteredList;
-    },
-    // Open contact modal
-    openContactModal: function(bagger) {
-      this.contact = {
-        success: false,
-        error: null,
-        bagger: bagger.contacts.mail,
-        email: null,
-        title: 'Contact pour un BBL',
-        body: null
-      }
-      $('#contact-modal').modal('show');
-    },
-    // Envoi de l'email
-    sendEmail: function() {
-      $.ajax({
-        url: "http://nodemailsender.herokuapp.com/mail",
-        data: {
-          from: this.contact.email,
-          to: this.contact.bagger,
-          subject: this.contact.title,
-          message: this.contact.body
-        },
-        type: 'POST',
-        contentType: "application/x-www-form-urlencoded; charset=utf-8",
-        success: function(data) {
-          this.contact.success = true;
-          $('#contact-modal').modal('hide');
-        }.bind(this),
-        error: function(xhr, status, errorThrown) {
-          this.contact.error = xhr.responseText;
-        }.bind(this)
-      });
     }
   }
 });

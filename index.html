@@ -57,7 +57,7 @@
             <input type="text"
                    class="form-control"
                    style="width: 350px"
-                   placeholder="Chercher un(e) bagger, une technologie..."
+                   placeholder="Chercher un(e) job hacker, une technologie..."
                    v-model="filtering">
             <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
           </div>
@@ -93,21 +93,21 @@
               <li class="list-group-item justify-content-between list-group-item-action city-menu"
                   :class="{ active: selectedCity === null }"
                   @click="selectedCity = null">
-                Toutes les villes <span class="badge badge-primary badge-pill">{{ baggers.length }}</span>
+                Toutes les villes <span class="badge badge-primary badge-pill">{{ members.length }}</span>
               </li>
               <li class="list-group-item justify-content-between list-group-item-action city-menu"
                   :class="{ active: selectedCity === city.name }"
                   v-for="city in cities"
                   @click="selectedCity = city.name">
                 {{ city.name }}
-                <span class="badge badge-primary badge-pill">{{ city.baggers }}</span>
+                <span class="badge badge-primary badge-pill">{{ city.members }}</span>
               </li>
             </ul>
           </div>
         <div class="col-10 col-sm-10">
-          <h1>{{ baggersFilteredCount }} job hackers</h1>
+          <h1>{{ membersFilteredCount }} job hackers</h1>
 
-          <div class="row" v-if="baggersFilteredCount === 0">
+          <div class="row" v-if="membersFilteredCount === 0">
             <div class="col-12">
               <h4><i class="fa fa-search text-danger"></i> Aucune personne correspondante à vos critères n'a été trouvée...</h4>
             </div>
@@ -115,51 +115,40 @@
 
           <!-- Liste (filtrée) des job hackers... -->
           <div class="row justify-content-center">
-            <div v-for="bagger in displayedBaggers" class="col-sm-6 col-xs-12">
+            <div v-for="member in displayedMembers" class="col-sm-6 col-xs-12">
               <div class="bagger">
-                <a :id="bagger.id"></a>
-                <div :class="'bagger-header ' + bagger.mainCity">
-                  {{ bagger.cities[0] }}
+                <a :id="member.id"></a>
+                <div :class="'bagger-header ' + member.mainCity">
+                  {{ member.cities[0] }}
                   <div class="bagger-picture">
-                    <img :src="bagger.picture">
+                    <img :src="member.picture">
                   </div>
                 </div>
 
                 <div class="bagger-bio">
                   <div class="row">
                     <div class="col-xs-8 col-sm-9">
-                      <h4 class="bagger-name"><a :href="'#' + bagger.id">{{ bagger.name }}</a></h4>
-                      <p v-html="bagger.bio"></p>
-                    </div>
-                    <div class="col-xs-4 col-sm-3 text-right">
-                      <a href="#" class="btn btn-primary" @click="openContactModal(bagger)"><i class="fa fa-cutlery"></i> Inviter</a>
+                      <h4 class="bagger-name"><a :href="'#' + member.id">{{ member.name }}</a></h4>
+                      <p v-html="member.bio"></p>
                     </div>
                   </div>
-                  <span class="text-muted"><i class="fa fa-map-marker"></i> {{ bagger.location }}</span>
+                  <span class="text-muted"><i class="fa fa-map-marker"></i> {{ member.location }}</span>
                 </div>
 
                 <div class="bagger-presentations">
                   <ul class="list-group list-group-flush bagger-sessions">
-                    <li class="list-group-item bagger-session" v-for="session in bagger.sessions">
-                      <span class="bagger-session-title" @click="session.opened = !session.opened">
-                        <i v-if="!session.opened" class="fa fa-caret-right"></i>
-                        <i v-if="session.opened" class="fa fa-caret-down"></i>
-                        {{ session.title }}
+                    <li class="list-group-item bagger-session" v-for="skill in member.skills">
+                      <span class="bagger-session-title">
+                        {{ skill }}
                       </span>
-                      <div>
-                        <span v-for="tag in session.tags" class="badge badge-pill badge-info">{{ tag }}</span>
-                      </div>
-                      <div v-if="session.opened" class="bagger-session-abstract">
-                        <blockquote class="blockquote" v-html="session.abstract"></blockquote>
-                      </div>
                     </li>
                   </ul>
                 </div>
                 <div class="bagger-links">
-                  <span v-if="bagger.contacts.twitter">
-                    <a :href="'https://twitter.com/' + bagger.contacts.twitter" target="_blank"><i class="fa fa-twitter"></i> @{{ bagger.contacts.twitter }}</a>
+                  <span v-if="member.contacts.twitter">
+                    <a :href="'https://twitter.com/' + member.contacts.twitter" target="_blank"><i class="fa fa-twitter"></i> @{{ member.contacts.twitter }}</a>
                   </span>
-                  <span v-for="site in bagger.websites">
+                  <span v-for="site in member.websites">
                     <a :href="site.url" target="_blank"><i class="fa fa-globe"></i> {{ site.name }}</a>
                   </span>
                 </div>

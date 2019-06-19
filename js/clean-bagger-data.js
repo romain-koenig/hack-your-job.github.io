@@ -108,26 +108,43 @@ function removeDiacritics (str) {
   });
 }
 
-var baggerData = window.data;
-
-for (var speak in baggerData.members) {
-  var member = baggerData.members[speak];
+data.members.forEach(member => {
   member.id = removeDiacritics(member.name.toLowerCase().replace(/ /g, '-'));
   // for (var skill in member.skills) {
   //   member.sessions[skill].opened = false;
   // }
-  for (var i = 0; i < member.cities.length; i++) {
-    var city = member.cities[i];
-    var c = baggerData.cities[city];
-    if (c) {
-      if (c.baggers) {
-        c.baggers++;
-      } else {
-        c.baggers = 1;
-      }
+  
+  const cities = new Object()
+  member.cities.forEach(city => {
+    // if(cities.has(city)) {
+    //   const membersCount = cities.get(city)
+    //   cities.set(city, membersCount + 1)
+    // } else {
+    //   cities.set(city, 1)
+    // }
+    if(cities.hasOwnProperty(city)) {
+      cities[city]++
+    } else {
+      cities[city] = 1
     }
-    if (i === 0) {
-      member.mainCity = removeDiacritics(city.toLowerCase().replace(/ /g, '-'));
-    }
+  })
+
+  data.cities = Array()
+
+  for(const city in cities) {
+    data.cities.push({title:city, members: cities[city]})
   }
-}
+
+  data.skills = new Map()
+  member.skills.forEach(skill => {
+    if(data.skills.has(skill)) {
+      const membersCount = data.skills.get(skill)
+      data.skills.set(skill, membersCount + 1)
+    } else {
+      data.skills.set(skill, 1)
+    }
+  })
+
+  member.mainCity = removeDiacritics(member.cities[0].toLowerCase().replace(/ /g, '-'));
+
+})
