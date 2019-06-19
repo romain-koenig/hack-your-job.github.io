@@ -110,14 +110,14 @@ function removeDiacritics (str) {
 
 var baggerData = window.data;
 
-for (var speak in baggerData.speakers) {
-  var speaker = baggerData.speakers[speak];
-  speaker.id = removeDiacritics(speaker.name.toLowerCase().replace(/ /g, '-'));
-  for (var session in speaker.sessions) {
-    speaker.sessions[session].opened = false;
-  }
-  for (var i = 0; i < speaker.cities.length; i++) {
-    var city = speaker.cities[i];
+for (var speak in baggerData.members) {
+  var member = baggerData.members[speak];
+  member.id = removeDiacritics(member.name.toLowerCase().replace(/ /g, '-'));
+  // for (var skill in member.skills) {
+  //   member.sessions[skill].opened = false;
+  // }
+  for (var i = 0; i < member.cities.length; i++) {
+    var city = member.cities[i];
     var c = baggerData.cities[city];
     if (c) {
       if (c.baggers) {
@@ -127,7 +127,7 @@ for (var speak in baggerData.speakers) {
       }
     }
     if (i === 0) {
-      speaker.mainCity = removeDiacritics(city.toLowerCase().replace(/ /g, '-'));
+      member.mainCity = removeDiacritics(city.toLowerCase().replace(/ /g, '-'));
     }
   }
 }
