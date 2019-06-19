@@ -51,9 +51,6 @@
       <a class="navbar-brand" href="#">Hack your job</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="locations.html"><i class="fa fa-building"></i> Où proposer un BBL ?</a>
-          </li>
         </ul>
         <form class="form-inline">
           <div class="input-group">
@@ -175,70 +172,20 @@
     </div>
 
     <div class="copyrights text-right">
-      <i class="fa fa-creative-commons"></i> Toutes les images de villes proviennent de Flickr en Creative Commons.
-    </div>
-
-    <!-- Contact modal -->
-    <div class="modal bd-example-modal-lg fade" id="contact-modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-calendar"></i> Prendre rendez-vous</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="alert alert-danger" v-if="contact.error" role="alert">
-              <i class="fa fa-warning"></i> Une erreur est survenue lors de l'envoi de l'email à <strong>{{ contact.bagger }}</strong>.
-              <br>
-              <code>{{ contact.error }}</code>
-            </div>
-            <form>
-              <div class="container">
-                <p>Vous voulez plus d'information sur une session ou vous souhaitez définir une date pour une session ?</p>
-                <!-- Email du bagger -->
-                <div class="form-group">
-                  <label for="example-text-input">Email du bagger</label>
-                  <input class="form-control" type="text" v-model="contact.bagger" id="bagger-email" readonly>
-                </div>
-                <!-- Email de l'hôte -->
-                <div class="form-group">
-                  <label for="example-text-input">Votre email</label>
-                  <input class="form-control" type="text" v-model="contact.email" id="host-email">
-                </div>
-                <!-- Titre de l'email -->
-                <div class="form-group">
-                  <label for="example-text-input">Titre de l'email</label>
-                  <input class="form-control" type="text" v-model="contact.title" id="email-title">
-                </div>
-                <!-- Texte de l'email -->
-                <div class="form-group">
-                  <label for="example-text-input">Texte de l'email</label>
-                  <textarea class="form-control" v-model="contact.body" id="email-content"></textarea>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-            <button type="button" class="btn btn-primary" @click="sendEmail()">Envoyer</button>
-          </div>
-        </div>
-      </div>
+      <i class="fa fa-creative-commons"></i> Site forké à partir de <a href="https://github.com/brownbaglunch/BrownBagLunch">brown bag lunch</a>
     </div>
   </div>
 
   <!-- Footer -->
   <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <a class="navbar-brand" href="#">BrownBagLunch</a>
+    <a class="navbar-brand" href="#">Hack your job</a>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/brownbaglunch/bblfr_data" target="_blank"><i class="fa fa-github-alt"></i> Rejoignez la communauté des baggers</a>
+          <a class="nav-link" href="https://www.hackyourjob.com/" target="_blank"><i class="fa fa-github-alt"></i> Rejoignez la communauté Hack your job</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/bbl_fr" target="_blank"><i class="fa fa-twitter"></i> @bbl_fr</a>
+          <a class="nav-link" href="https://twitter.com/HackYrJob" target="_blank"><i class="fa fa-twitter"></i> @HackYrJob</a>
         </li>
       </ul>
     </div>
