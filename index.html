@@ -135,14 +135,8 @@
                   <span class="text-muted"><i class="fa fa-map-marker"></i> {{ member.location }}</span>
                 </div>
 
-                <div class="bagger-presentations">
-                  <ul class="list-group list-group-flush bagger-sessions">
-                    <li class="list-group-item bagger-session" v-for="skill in member.skills">
-                      <span class="bagger-session-title">
-                        {{ skill }}
-                      </span>
-                    </li>
-                  </ul>
+                <div class="bagger-links">
+                    <span v-for="skill in member.skills" class="badge badge-pill badge-info">{{ skill }}</span>
                 </div>
                 <div class="bagger-links">
                   <span v-if="member.contacts.twitter">
