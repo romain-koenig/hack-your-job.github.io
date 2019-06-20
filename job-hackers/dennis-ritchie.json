@@ -1,0 +1,26 @@
+{
+  "name": "Denis Ritchie",
+  "bio": "Développeur trucmuche",
+  "picture": "http://gravatar.com/avatar/",
+  "websites": [
+    {
+      "name": "Github",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "Blog",
+      "url": "https://"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "C"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "xxx",
+    "mail": "xxx@xxx.net"
+  }
+}
