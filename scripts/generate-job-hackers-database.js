@@ -1,6 +1,7 @@
 const fs = require("fs");
 
 const profilesFolder = "job-hackers"
+const targetProfilesFile = "profiles-data/job-hackers.json"
 
 const concatenateJSON = (fileName) => getJobHackerObject(profilesFolder + "/" + fileName)
 
@@ -10,11 +11,10 @@ const getJobHackerObject = (file) => {
 }
 
 fs.readdir(profilesFolder, (error, files) => {
-    //const profilesArray = files.reduce(concatenateJSON, null)
     const profilesArray = files.map(concatenateJSON)
-    fs.writeFile("profiles-data/job-hackers.fs", JSON.stringify(profilesArray), (err) => {
+    fs.writeFile(targetProfilesFile, JSON.stringify(profilesArray), (err) => {
         if (err) throw err;
-        console.log('The file has been saved!');
+        console.log(`${targetProfilesFile} has been saved successfully`);
     })
 })
 
