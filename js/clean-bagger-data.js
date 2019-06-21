@@ -108,6 +108,22 @@ function removeDiacritics (str) {
   });
 }
 
+const data = {}
+
+const req = new XMLHttpRequest();
+
+req.open('GET', 'profiles-data/job-hackers.json', false); 
+req.send(null);
+
+if (req.status === 200) {
+    console.log("Réponse reçue: %s", req.responseText);
+    data.members = JSON.parse(req.responseText)
+} else {
+    console.log("Status de la réponse: %d (%s)", req.status, req.statusText);
+}
+
+
+
 data.members.forEach(member => {
   member.id = removeDiacritics(member.name.toLowerCase().replace(/ /g, '-'));
   // for (var skill in member.skills) {
