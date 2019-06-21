@@ -1,0 +1,38 @@
+{
+  "name": "Sam Bauwens",
+  "bio":
+    "Développeur .NET Indépendant",
+  "picture":
+    "images/Sam-Bauwens.png",
+  "websites": [
+    
+    {
+      "name": "Linkedin",
+      "url": "http://linkedin.com/in/sambauwens"
+    },
+    {
+      "name": "Projet perso",
+      "url": "http://golf-mini.com/"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/sambauwens"
+    },
+    {
+      "name": "Stackoverflow",
+      "url": "https://stackoverflow.com/users/124187/sam-bauwens"
+    }
+    
+  ],
+  "location": "Lyon",
+  "skills": [
+    "ASP.NET MVC",
+   "TDD",
+   "C#"
+  ],
+  "cities": ["Lyon"],
+  "contacts": {
+    "twitter": "sambauwens",
+    "mail": ""
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Clément Bouillier",
+  "bio": " Software Craftsmanship",
+  "picture": "images/clémentBouiller.jpeg",
+  "websites": [
+    {
+      "name": "Github",
+      "url": "https://github.com/devcrafting"
+    },
+    {
+      "name": "Blog",
+      "url": "http://www.devcrafting.com/"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://fr.linkedin.com/in/clementbouillier/fr"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "Java",
+    "Haskell"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "clem_bouillier",
+    "mail": "xxx@xxx.net"
+  }
+}

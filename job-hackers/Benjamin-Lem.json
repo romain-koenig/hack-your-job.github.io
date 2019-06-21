@@ -1,0 +1,18 @@
+{
+  "name": "Benjamin Lem",
+  "bio": "Développeur ",
+  "picture": "http://gravatar.com/avatar/",
+  "websites": [],
+  "location": "Lyon",
+  "skills": [
+    ".Net",
+    "Vue.js"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "",
+    "mail": "xxx@xxx.net"
+  }
+}

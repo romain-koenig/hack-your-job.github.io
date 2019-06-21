@@ -1,0 +1,34 @@
+{
+  "name": "Florent Pellet",
+  "bio": "Software Craftsman Freelance",
+  "picture": "images/florentpellet.jpeg",
+  "websites": [
+    {
+      "name": "Github",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "Site web",
+      "url": "http://www.florentpellet.fr/"
+    },
+    {
+      "name": "Linkedin",
+      "url": "http://fr.linkedin.com/in/florentpellet"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "DDD",
+    "Event Sourcing",
+    "CQRS",
+    ".Net Core (F#)",
+    "Fable"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "florentpellet",
+    "mail": "xxx@xxx.net"
+  }
+}

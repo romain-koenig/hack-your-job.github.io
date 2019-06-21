@@ -1,0 +1,38 @@
+{
+  "name": "Charles Bouttaz",
+  "bio": "Développeur Freelance",
+  "picture": "images/charlesBoutaz.jpeg",
+  "websites": [
+    {
+      "name": "Site web",
+      "url": "https://www.doyoubuzz.com/charles-bouttaz"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://fr.linkedin.com/in/charles-bouttaz-18289a39"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "Java",
+    "Java EE",
+    "Javascript",
+    "Test Driven Development",
+    "Méthodes agiles",
+    "Spring",
+    "JUnit",
+    "Hibernate",
+    "MySQL",
+    "Maven",
+    "Linux",
+    "Tomcat",
+    "Android"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "CharlesBouttaz",
+    "mail": "xxx@xxx.net"
+  }
+}

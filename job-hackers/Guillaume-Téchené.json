@@ -1,0 +1,32 @@
+{
+  "name": "Guillaume Téchené",
+  "bio": "Software Crafter",
+  "picture": "images/Guillaumetechine.jpeg",
+  "websites": [
+    {
+      "name": "Blog",
+      "url": "https://guillaume.techene.net/"
+    },
+    {
+      "name": "Site web",
+      "url": "https://craftech.fr/"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://fr.linkedin.com/in/guillaume-téchené-9873771"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "Java",
+    "C#",
+    "SQL"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "GTechene",
+    "mail": "xxx@xxx.net"
+  }
+}

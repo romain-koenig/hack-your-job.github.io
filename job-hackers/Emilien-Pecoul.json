@@ -1,0 +1,31 @@
+{
+  "name": "Emilien Pecoul",
+  "bio": "Co-Fondateur chez KickBanking Passionate software developer ",
+  "picture": "images/emilienpecoul.jpeg",
+  "websites": [
+    {
+      "name": "Blog",
+      "url": "http://www.ouarzy.com/"
+    },
+    {
+      "name": "Site web",
+      "url": "http://emilien-pecoul.azurewebsites.net/"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/emilien-pecoul-6a009153/"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "C#",
+    ".Net"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "Ouarzy",
+    "mail": "xxx@xxx.net"
+  }
+}

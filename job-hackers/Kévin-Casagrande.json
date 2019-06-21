@@ -1,0 +1,30 @@
+{
+  "name": "Kévin Casagrande",
+  "bio": "Développeur Java/web",
+  "picture": "images/kevincasagrande.jpeg",
+  "websites": [
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/k-casagrande"
+    },
+    {
+      "name": "codingame",
+      "url": "https://www.codingame.com/profile/0335869f0c941421e725c7c2aa48da018427471"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "Java",
+    "Vue js",
+    "Angular",
+    "Typescript",
+    "Javascript/HTML/CSS"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "_kcasagrande",
+    "mail": ""
+  }
+}
