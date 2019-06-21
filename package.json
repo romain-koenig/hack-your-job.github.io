@@ -1,0 +1,11 @@
+{
+    "name": "hack-your-job-profiles",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "build": "node scripts/generate-job-hackers-database.js",
+        "test": ""
+    },
+    "devDependencies": {
+    }
+}
