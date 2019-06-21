@@ -3,7 +3,7 @@ const fs = require("fs");
 const profilesFolder = "job-hackers"
 const targetProfilesFile = "profiles-data/job-hackers.json"
 
-const concatenateJSON = (fileName) => getJobHackerObject(profilesFolder + "/" + fileName)
+const concatenateJSON = (fileName) => getJobHackerObject(`${profilesFolder}/${fileName}`)
 
 const getJobHackerObject = (file) => {
     const fileData = fs.readFileSync(file, "utf8")
