@@ -4,7 +4,7 @@ const getMembers = function() {
 
   const vueData = this
 
-  fetch('profiles-data/job-hackers.json').then(response => {
+  fetch('job-hackers.json').then(response => {
     response.json().then(json => {
       vueData.members = json
 

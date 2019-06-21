@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const profilesFolder = "job-hackers"
-const targetProfilesFile = "profiles-data/job-hackers.json"
+const targetProfilesFile = "job-hackers.json"
 
 const concatenateJSON = (fileName) => getJobHackerObject(`${profilesFolder}/${fileName}`)
 
