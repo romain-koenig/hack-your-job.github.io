@@ -1,0 +1,52 @@
+{
+  "name": "Gilles Figuière",
+  "bio": "Développeur logiciel et web indépendant",
+  "picture": "images/GillesFiguiére.jpeg",
+  "websites": [
+    {
+      "name": "Github",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "Site web",
+      "url": "https://www.doyoubuzz.com/charles-bouttaz"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/gillesfiguiere/"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "C#",
+    "C++",
+    "C",
+    "Java",
+    "JavaScript",
+    "PHP",
+    "HTML5",
+    "CSS",
+    "D3.js",
+    "Twitter Bootstrap",
+    "Node.js",
+    "ASP.NET",
+    "Bash",
+    "jQuery",
+    "Perl",
+    "WordPress",
+    "AngularJS",
+    "Framework Ionic",
+    "Git",
+    "SharePoint",
+    "SQL Server Integration Services (SSIS)",
+    "Windows PowerShell",
+    "SQL",
+    "XML"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "mail": "mr.gilles.figuiere@gmail.com"
+  }
+}

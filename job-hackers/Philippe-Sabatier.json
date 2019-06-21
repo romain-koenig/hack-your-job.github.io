@@ -1,0 +1,24 @@
+{
+  "name": "Philippe Sabatier ",
+  "bio": "Ingénieur développeur Java Freelance",
+  "picture": "images/Philippe-Sabatier.jpeg",
+  "websites": [
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/philippe-sabatier-213244156"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "Java",
+    "TDD",
+    "Clean Code"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "",
+    "mail": ""
+  }
+}

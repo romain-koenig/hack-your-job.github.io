@@ -1,0 +1,26 @@
+{
+  "name": "Grégory Aldebert",
+  "bio": "Freelance Software Craftsman",
+  "picture": "images/grégoryaldebert.jpeg",
+  "websites": [
+    {
+      "name": "Linkedin",
+      "url": "https://fr.linkedin.com/in/gregory-aldebert"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    ".NET",
+    "C#",
+    "Internet des objets",
+    "SQL Server",
+    "Systèmes embarqués"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "",
+    "mail": "xxx@xxx.net"
+  }
+}

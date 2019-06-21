@@ -1,0 +1,38 @@
+{
+  "name": "Jean-Charles Gouleau",
+  "bio": "Développeur Java/web",
+  "picture": "images/jeancharlesgouleau.jpeg",
+  "websites": [
+    {
+      "name": "Blog",
+      "url": "https://valorisetonweb.fr/blog/"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/gouleaujeancharles/"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/specialjcg/"
+    },
+    {
+      "name": "Site web",
+      "url": "https://valorisetonweb.fr/"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "Java",
+    "Vue js",
+    "Angular",
+    "Typescript",
+    "Javascript/HTML/CSS"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "GouleauJ",
+    "mail": ""
+  }
+}

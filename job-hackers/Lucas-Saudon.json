@@ -1,0 +1,29 @@
+{
+  "name": "Lucas Saudon",
+  "bio": "Freelance Flutter / C#/ WPF / Xamarin.Forms",
+  "picture": "images/lucassaudon.jpeg",
+  "websites": [
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/lucas-saudon"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/lsaudon"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "Flutter",
+    "C#",
+    "WPF",
+    "Xamarin.Forms"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "lsaudon",
+    "mail": ""
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Jean Detoeuf ",
+  "bio": "Freelance Software Developer",
+  "picture": "images/jeandetoeuf.jpeg",
+  "websites": [
+    {
+      "name": "Blog",
+      "url": "https://blog.upcoding.fr/"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/jean-detoeuf/"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/thebignet"
+    },
+    {
+      "name": "Site web",
+      "url": "https://www.upcoding.fr/"
+    }
+  ],
+  "location": "Lyon",
+  "skills": [
+    "Java",
+    "Scala",
+    "Agilité",
+    "DevOps",
+    "Craftsman"
+  ],
+  "cities": [
+    "Lyon"
+  ],
+  "contacts": {
+    "twitter": "thebignet",
+    "mail": ""
+  }
+}

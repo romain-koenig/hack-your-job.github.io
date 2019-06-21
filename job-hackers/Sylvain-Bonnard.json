@@ -1,0 +1,36 @@
+{
+  "name": "Sylvain Bonnard",
+  "bio":
+    "Développeur Freelance",
+  "picture":
+    "images/SylvainBonnard.jpeg",
+  "websites": [
+    
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/sylvain-bonnard-5a1469ba"
+    },
+    {
+      "name": "Stackoverflow",
+      "url": "https://stackoverflow.com/users/1062620/budgw"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/BudGW"
+    }
+
+    
+  ],
+  "location": "Lyon",
+  "skills": [
+    "JAVA",
+   "JAVA EE",
+   "VUE JS",
+   "Junit"
+  ],
+  "cities": ["Lyon"],
+  "contacts": {
+    "twitter": "BudGW",
+    "mail": "sylvain.bonnard@gmail.com"
+  }
+}
