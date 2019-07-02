@@ -42,8 +42,8 @@
 <body>
   <div id="app-vue">
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse sticky-top">
-      <span class="logo"><img class="img-fluid" src="images/hackyourjob.png" alt="Logo Hack Your Job"></span>
-      <a class="navbar-brand" href="#">Hack your job</a>
+      <span class="logo"><img src="images/hackyourjob.png" alt="Logo Hack Your Job"></span>
+      <a class="navbar-brand" href="#">Hack your job : {{ membersFilteredCount }} membres</h1></a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
@@ -84,7 +84,7 @@
         <!-- Liste des villes -->
         <div class="col-sm-2 cities-group">
             <ul class="list-group cities-list">
-              <li class="list-group-item list-group-item-inverse cities-title">Choisissez la ville</li>
+              <li class="list-group-item list-group-item-inverse cities-title">Choisissez une ville</li>
               <li class="list-group-item justify-content-between list-group-item-action city-menu"
                   :class="{ active: selectedCity === null }"
                   @click="selectedCity = null">
@@ -100,7 +100,7 @@
             </ul>
 
             <ul class="list-group cities-list">
-              <li class="list-group-item list-group-item-inverse cities-title">Choisissez les compétences</li>
+              <li class="list-group-item list-group-item-inverse cities-title">Choisissez une compétence</li>
               <li class="list-group-item justify-content-between list-group-item-action city-menu"
                   :class="{ active: selectedSkill === null }"
                   @click="selectedSkill = null">
@@ -117,7 +117,6 @@
 
           </div>
         <div class="col-10 col-sm-10">
-          <h1>{{ membersFilteredCount }} job hackers</h1>
 
           <div class="row" v-if="membersFilteredCount === 0">
             <div class="col-12">

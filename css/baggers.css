@@ -231,6 +231,10 @@
   height: 50px;
 }
 
+.logo img {
+  height: 100%;
+}
+
 .loading-message {
   transition: display 1s;
 }
