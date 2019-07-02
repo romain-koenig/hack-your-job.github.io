@@ -98,6 +98,23 @@
                 <span class="badge badge-primary badge-pill">{{ city.members }}</span>
               </li>
             </ul>
+
+            <ul class="list-group cities-list">
+              <li class="list-group-item list-group-item-inverse cities-title">Choisissez les compétences</li>
+              <li class="list-group-item justify-content-between list-group-item-action city-menu"
+                  :class="{ active: selectedSkill === null }"
+                  @click="selectedSkill = null">
+                Toutes les compétences <span class="badge badge-primary badge-pill">{{ members.length }}</span>
+              </li>
+              <li class="list-group-item justify-content-between list-group-item-action city-menu"
+                  :class="{ active: selectedSkill === skill.name }"
+                  v-for="skill in skills"
+                  @click="selectedSkill = skill.name">
+                {{ skill.name }}
+                <span class="badge badge-primary badge-pill">{{ skill.members }}</span>
+              </li>
+            </ul>
+
           </div>
         <div class="col-10 col-sm-10">
           <h1>{{ membersFilteredCount }} job hackers</h1>
@@ -113,10 +130,9 @@
             <div v-for="member in displayedMembers" class="col-sm-6 col-xs-12">
               <div class="bagger">
                 <a :id="member.id"></a>
-                <div :class="'bagger-header ' + member.mainCity">
-                  {{ member.cities[0] }}
+                <div class="bagger-header">
                   <div class="bagger-picture">
-                    <img :src="member.picture">
+                    <img :src="member.picture ? member.picture : 'images/hackyourjob.png'">
                   </div>
                 </div>
 

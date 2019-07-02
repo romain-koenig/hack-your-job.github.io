@@ -35,11 +35,11 @@ const getMembers = function() {
       })
 
       for (const city in cities) {
-        vueData.cities.push({ title: city, members: cities[city] })
+        vueData.cities.push({ name: city, members: cities[city] })
       }
 
       for (const skill in skills) {
-        vueData.skills.push({ title: skill, members: skills[skill] })
+        vueData.skills.push({ name: skill, members: skills[skill] })
       }
     })
   })
@@ -51,6 +51,7 @@ new Vue({
   data: {
     filtering: '',
     selectedCity: null,
+    selectedSkill: null,
     cities: [],
     skills: [],
     members: [],
