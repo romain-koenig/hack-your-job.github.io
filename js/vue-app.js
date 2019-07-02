@@ -75,13 +75,16 @@ new Vue({
   },
   methods: {
     filtered: function (members) {
-      if (this.filtering === '' && !this.selectedCity) {
+      if (this.filtering === '' && !this.selectedCity && !this.selectedSkill) {
         this.membersFilteredCount = members.length;
         return members;
       }
       var filter = this.filtering.toLowerCase();
       var filteredList = members.filter(function (member) {
         if (this.selectedCity && member.cities.indexOf(this.selectedCity) === -1) {
+          return false;
+        }
+        if (this.selectedSkill && member.skills.indexOf(this.selectedSkill) === -1) {
           return false;
         }
         return JSON.stringify(member).toLowerCase().indexOf(filter) > -1;
