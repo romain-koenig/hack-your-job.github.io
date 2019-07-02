@@ -82,20 +82,18 @@
 */
 
 .bagger-picture {
-  display: inline-block;
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  z-index: 128;
-}
-.bagger-picture img {
   height: 150px;
   width: 150px;
   border-radius: 75px;
   border: solid 8px #f7f7f9;
-  background: url(../images/profile.png) no-repeat center center white;
-  background-size: contain;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 128;
+}
+.bagger-picture img {
 }
 
 .bagger-name a {
