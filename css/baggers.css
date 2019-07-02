@@ -24,7 +24,8 @@
 }
 
 .bagger {
-  border: solid 1px #ccc;
+  /* border: solid 1px #ccc; */
+  box-shadow: 0 0 10px 2px grey;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -82,7 +83,6 @@
 
 .bagger-picture {
   display: inline-block;
-  top: -35px;
   position: relative;
   margin: 0 auto;
   width: 100%;
