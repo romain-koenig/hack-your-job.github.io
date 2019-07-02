@@ -29,7 +29,11 @@ const validateProfile = (fileName) => {
         return false
     }
 
-    const ajv = new Ajv()
+    const ajv = new Ajv({
+        allErrors: true,
+        verbose: true
+    })
+
     const valid = ajv.validate(schema, data)
     if (!valid) {
         console.error(`${fileName} is not valid:`)
