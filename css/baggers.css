@@ -223,69 +223,12 @@
   --color-bg: #292B2C;
   --color-primary: #EF5B7E;
   --color-secondary: #59C2AA;
-  --size-logo: 3rem;
   --font-family: 'Fredoka One', sans-serif;
   --animation-speed: 10s;
 }
 
 .logo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: var(--size-logo);
-  height: var(--size-logo);
-  color: var(--color-bg);
-  font-size: calc(var(--size-logo) * .35);
-  font-weight: bold;
-  font-family: var(--font-family);
-  user-select: none;
-  margin-right: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.logo::after,
-.logo::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  border-radius: calc(var(--size-logo) * .3);
-  mix-blend-mode: color-dodge;
-}
-
-.logo::before {
-  background-color: var(--color-primary);
-  transform: rotate(-30deg);
-  z-index: -2;
-  animation: rotate1 var(--animation-speed) linear infinite;
-}
-
-.logo::after {
-  background-color: var(--color-secondary);
-  transform: rotate(20deg);
-  z-index: -1;
-  animation: rotate2 calc(var(--animation-speed) * .9) linear infinite;
-}
-
-@keyframes rotate1 {
-  from {
-    transform: rotate(-30deg);
-  }
-  to {
-    transform: rotate(330deg);
-  }
-}
-
-@keyframes rotate2 {
-  from {
-    transform: rotate(380deg);
-  }
-  to {
-    transform: rotate(20deg);
-  }
+  height: 50px;
 }
 
 .loading-message {
