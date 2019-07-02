@@ -1,6 +1,6 @@
 {
   "name": "Gilles Figuière",
-  "title": "Développeur logiciel et web indépendant",
+  "title": "Développeur logiciel et web freelance",
   "picture": "images/GillesFiguiére.jpeg",
   "links": [
     {
@@ -28,24 +28,10 @@
     "Java",
     "JavaScript",
     "PHP",
-    "HTML5",
-    "CSS",
-    "D3.js",
-    "Twitter Bootstrap",
     "Node.js",
     "ASP.NET",
-    "Bash",
-    "jQuery",
-    "Perl",
-    "WordPress",
     "AngularJS",
-    "Framework Ionic",
-    "Git",
-    "SharePoint",
-    "SQL Server Integration Services (SSIS)",
-    "Windows PowerShell",
-    "SQL",
-    "XML"
+    "Ionic"
   ],
   "cities": [
     "Lyon"
