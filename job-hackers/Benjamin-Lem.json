@@ -4,7 +4,7 @@
   "links": [
     {
       "type": "mail",
-      "link": "mail:xxx@xxx.com"
+      "link": "mailto:xxx@xxx.com"
     }
   ],
   "skills": [
