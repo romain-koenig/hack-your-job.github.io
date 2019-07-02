@@ -16,9 +16,8 @@
   <link rel="icon" href="favicon.ico" />
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" media="screen" href="css/baggers.css" />
 
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
@@ -129,34 +128,36 @@
           <!-- Liste (filtrée) des job hackers... -->
           <div class="members-container">
             <div :id="member.id" v-for="member in displayedMembers" class="member d-flex flex-column">
-                <div class="member-header">
-                  <div class="member-picture-shadow">
-                    <div class="member-picture">
-                      <img :src="member.picture ? member.picture : 'images/hackyourjob.png'">
-                    </div>
-                  </div>
-                  <div class="member-bio">
-                    <h4 class="member-name">{{ member.name }}</h4>
-                    <p class="member-title" v-html="member.title"></p>
-                    <p class="member-location text-muted"><i class="fa fa-map-marker"></i> {{ member.location }}</p>
+              <div class="member-header">
+                <div class="member-picture-shadow">
+                  <div class="member-picture">
+                    <img :src="member.picture ? member.picture : 'images/hackyourjob.png'">
                   </div>
                 </div>
+                <div class="member-bio">
+                  <h4 class="member-name">{{ member.name }}</h4>
+                  <p class="member-title" v-html="member.title"></p>
+                  <p class="member-location text-muted"><i class="fa fa-map-marker"></i> {{ member.mainCity }}</p>
+                </div>
+              </div>
 
-                <div class="member-skills">
-                  <span v-for="skill in member.skills" class="badge badge-pill badge-info">{{ skill }}</span>
-                </div>
-                <div class="member-links">
-                  <span v-if="member.contacts.twitter">
-                    <a :title="member.contacts.twitter" :href="'https://twitter.com/' + member.contacts.twitter" target="_blank"><i
-                        class="fa fa-twitter-square"></i></a>
-                  </span>
-                  <span v-if="member.contacts.linkedin">
-                    <a :href="member.contacts.linkedin" target="_blank"><i class="fa fa-linkedin"></i>
-                    </a>
-                  </span>
-                  <span v-for="site in member.websites">
-                    <a :href="site.url" target="_blank"><i class="fa fa-globe"></i> {{ site.name }}</a>
-                  </span>
+              <div class="member-skills">
+                <span v-for="skill in member.skills" class="badge badge-pill badge-info">{{ skill }}</span>
+              </div>
+              <div class="member-links">
+                <span v-for="link in member.links">
+                  <a :title="link.name || link.link" :href="link.link" target="_blank">
+                    <i v-if="link.type === 'twitter'" class="fab fa-twitter"></i>
+                    <i v-else-if="link.type === 'linkedin'" class="fab fa-linkedin"></i>
+                    <i v-else-if="link.type === 'github'" class="fab fa-github"></i>
+                    <i v-else-if="link.type === 'stackoverflow'" class="fab fa-stack-overflow"></i>
+                    <i v-else-if="link.type === 'mail'" class="fas fa-envelope-open-text"></i>
+                    <i v-else-if="link.type === 'tel'" class="fas fa-phone-square"></i>
+                    <i v-else-if="link.type === 'blog'" class="fas fa-blog"></i>
+                    <i v-else-if="link.type === 'website'" class="fab fa-firefox"></i>
+                    <i v-else class="fa fa-globe"></i>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
