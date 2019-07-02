@@ -2,25 +2,28 @@
   "name": "Jean Detoeuf ",
   "title": "Freelance Software Developer",
   "picture": "images/jeandetoeuf.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Blog",
-      "url": "https://blog.upcoding.fr/"
+      "type": "twitter",
+      "link": "https://twitter.com/thebignet"
     },
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/jean-detoeuf/"
+      "type": "blog",
+      "link": "https://blog.upcoding.fr/"
     },
     {
-      "name": "GitHub",
-      "url": "https://github.com/thebignet"
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/jean-detoeuf/"
     },
     {
-      "name": "Site web",
-      "url": "https://www.upcoding.fr/"
+      "type": "github",
+      "link": "https://github.com/thebignet"
+    },
+    {
+      "type": "website",
+      "link": "https://www.upcoding.fr/"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "Java",
     "Scala",
@@ -30,9 +33,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "thebignet",
-    "mail": ""
-  }
+  ]
 }

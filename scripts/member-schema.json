@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "picture": {
+            "type": "string"
+        },
+        "links": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name" : {
+                        "type": "string"
+                    },
+                    "type" : {
+                        "type": "string",
+                        "enum": ["twitter", "github", "mail", "tel", "linkedin", "website", "blog"]
+                    },
+                    "link" : {
+                        "type": "string"
+                    }
+                },
+                "required": ["type", "link"],
+                "additionalProperties": false
+            }
+        },
+        "skills": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "string"
+            }
+        },
+        "cities": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": ["name", "title", "links", "skills", "cities"],
+    "additionalProperties": false
+}

@@ -2,22 +2,17 @@
   "name": "Renaud Familiare",
   "title": "Ingénieur d'études Fullstack (JavaEE/Angular 7) freelance",
   "picture": "images/renaud-familiare.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/renaud-familiare"
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/renaud-familiare"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "Java",
     "Angular 7"
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "",
-    "mail": ""
-  }
+  ]
 }

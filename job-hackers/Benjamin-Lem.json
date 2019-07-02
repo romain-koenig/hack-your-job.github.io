@@ -1,18 +1,17 @@
 {
   "name": "Benjamin Lem",
   "title": "Développeur ",
-  "picture": "http://gravatar.com/avatar/",
-  "websites": [],
-  "location": "Lyon",
+  "links": [
+    {
+      "type": "mail",
+      "link": "mail:xxx@xxx.com"
+    }
+  ],
   "skills": [
     ".Net",
     "Vue.js"
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "",
-    "mail": "xxx@xxx.net"
-  }
+  ]
 }

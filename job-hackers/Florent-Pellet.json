@@ -2,21 +2,24 @@
   "name": "Florent Pellet",
   "title": "Software Craftsman Freelance",
   "picture": "images/florentpellet.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Github",
-      "url": "https://github.com/"
+      "type": "twitter",
+      "link": "https://twitter.com/florentpellet"
     },
     {
-      "name": "Site web",
-      "url": "http://www.florentpellet.fr/"
+      "type": "github",
+      "link": "https://github.com/"
     },
     {
-      "name": "Linkedin",
-      "url": "http://fr.linkedin.com/in/florentpellet"
+      "type": "website",
+      "link": "http://www.florentpellet.fr/"
+    },
+    {
+      "type": "linkedin",
+      "link": "http://fr.linkedin.com/in/florentpellet"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "DDD",
     "Event Sourcing",
@@ -26,9 +29,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "florentpellet",
-    "mail": "xxx@xxx.net"
-  }
+  ]
 }

@@ -4,27 +4,29 @@
     "Développeur .NET Freelance",
   "picture":
     "images/Sylvain-Coudert.jpeg",
-  "websites": [
-    
+  "links": [
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/sylvain-coudert-b802a477"
+      "type": "twitter",
+      "link": "https://twitter.com/sylv_coud"
     },
     {
-      "name": "Blog",
-      "url": "http://punkindev.fr/"
+      "type": "mail",
+      "link": "mailto:sylvain.coudert@yahoo.fr"
+    },
+    {
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/sylvain-coudert-b802a477"
+    },
+    {
+      "type": "blog",
+      "link": "http://punkindev.fr/"
     }
 
     
   ],
-  "location": "Lyon",
   "skills": [
     ".NET",
    "C#"
   ],
-  "cities": ["Lyon"],
-  "contacts": {
-    "twitter": "sylv_coud",
-    "mail": "sylvain.coudert@yahoo.fr"
-  }
+  "cities": ["Lyon"]
 }

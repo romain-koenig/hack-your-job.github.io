@@ -2,17 +2,17 @@
   "name": "Kévin Navarro",
   "title": "Développeur. Net/Azure freelance",
   "picture": "images/kevinnavarro.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/kévin-navarro-b5853b65/"
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/kévin-navarro-b5853b65/"
     },
     {
       "name": "codingame",
-      "url": "https://www.codingame.com/profile/0335869f0c941421e725c7c2aa48da018427471"
+      "type": "website",
+      "link": "https://www.codingame.com/profile/0335869f0c941421e725c7c2aa48da018427471"
     }
   ],
-  "location": "Lyon",
   "skills": [
     ".NET",
     "Microsoft SQL Server",
@@ -26,9 +26,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "",
-    "mail": ""
-  }
+  ]
 }

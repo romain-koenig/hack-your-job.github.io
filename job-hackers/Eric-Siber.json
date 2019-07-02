@@ -2,17 +2,20 @@
   "name": "Eric Siber",
   "title": "[Freelance] Agile Java Craftsman",
   "picture": "images/ericsiber.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Site web",
-      "url": "https://eric.siber.fr/"
+      "type": "twitter",
+      "link": "https://twitter.com/esiber"
     },
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/siber"
+      "type": "website",
+      "link": "https://eric.siber.fr/"
+    },
+    {
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/siber"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "Java",
     "Spring",
@@ -20,9 +23,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "esiber",
-    "mail": "xxx@xxx.net"
-  }
+  ]
 }

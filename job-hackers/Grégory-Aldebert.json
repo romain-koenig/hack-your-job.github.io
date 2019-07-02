@@ -2,13 +2,12 @@
   "name": "Grégory Aldebert",
   "title": "Freelance Software Craftsman",
   "picture": "images/grégoryaldebert.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Linkedin",
-      "url": "https://fr.linkedin.com/in/gregory-aldebert"
+      "type": "linkedin",
+      "link": "https://fr.linkedin.com/in/gregory-aldebert"
     }
   ],
-  "location": "Lyon",
   "skills": [
     ".NET",
     "C#",
@@ -18,9 +17,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "",
-    "mail": "xxx@xxx.net"
-  }
+  ]
 }

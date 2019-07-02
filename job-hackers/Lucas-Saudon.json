@@ -2,17 +2,20 @@
   "name": "Lucas Saudon",
   "title": "Freelance Flutter / C#/ WPF / Xamarin.Forms",
   "picture": "images/lucassaudon.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/lucas-saudon"
+      "type": "twitter",
+      "link": "https://twitter.com/lsaudon"
     },
     {
-      "name": "Github",
-      "url": "https://github.com/lsaudon"
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/lucas-saudon"
+    },
+    {
+      "type": "github",
+      "link": "https://github.com/lsaudon"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "Flutter",
     "C#",
@@ -21,9 +24,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "lsaudon",
-    "mail": ""
-  }
+  ]
 }

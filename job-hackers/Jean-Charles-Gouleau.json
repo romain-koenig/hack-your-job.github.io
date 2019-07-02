@@ -2,25 +2,28 @@
   "name": "Jean-Charles Gouleau",
   "title": "Développeur Java/web",
   "picture": "images/jeancharlesgouleau.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Blog",
-      "url": "https://valorisetonweb.fr/blog/"
+      "type": "twitter",
+      "link": "https://twitter.com/GouleauJ"
     },
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/gouleaujeancharles/"
+      "type": "blog",
+      "link": "https://valorisetonweb.fr/blog/"
     },
     {
-      "name": "GitHub",
-      "url": "https://github.com/specialjcg/"
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/gouleaujeancharles/"
     },
     {
-      "name": "Site web",
-      "url": "https://valorisetonweb.fr/"
+      "type": "github",
+      "link": "https://github.com/specialjcg/"
+    },
+    {
+      "type": "website",
+      "link": "https://valorisetonweb.fr/"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "Java",
     "Vue js",
@@ -30,9 +33,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "GouleauJ",
-    "mail": ""
-  }
+  ]
 }

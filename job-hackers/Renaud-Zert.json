@@ -2,22 +2,17 @@
   "name": "Renaud Zert",
   "title": "Développeur .NET Indépendant",
   "picture": "images/RenaudZert.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/renaudzert"
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/renaudzert"
     }
   ],
-  "location": "Lyon",
   "skills": [
     ".NET",
     "WPF"
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "",
-    "mail": ""
-  }
+  ]
 }

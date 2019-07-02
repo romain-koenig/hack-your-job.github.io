@@ -2,21 +2,24 @@
   "name": "Guillaume Téchené",
   "title": "Software Crafter",
   "picture": "images/Guillaumetechine.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Blog",
-      "url": "https://guillaume.techene.net/"
+      "type": "twitter",
+      "link": "https://twitter.com/GTechene"
     },
     {
-      "name": "Site web",
-      "url": "https://craftech.fr/"
+      "type": "blog",
+      "link": "https://guillaume.techene.net/"
     },
     {
-      "name": "Linkedin",
-      "url": "https://fr.linkedin.com/in/guillaume-téchené-9873771"
+      "type": "website",
+      "link": "https://craftech.fr/"
+    },
+    {
+      "type": "linkedin",
+      "link": "https://fr.linkedin.com/in/guillaume-téchené-9873771"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "Java",
     "C#",
@@ -24,9 +27,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "GTechene",
-    "mail": "xxx@xxx.net"
-  }
+  ]
 }

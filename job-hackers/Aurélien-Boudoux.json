@@ -2,25 +2,25 @@
   "name": "Aurélien Boudoux",
   "title": "Développeur C# Freelance",
   "picture": "images/aurélienboudoux.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Blog",
-      "url": "http://aurelien.boudoux.fr"
+      "type": "twitter",
+      "link": "https://twitter.com/AurelienBoudoux"
+    },
+    {
+      "type": "blog",
+      "link": "http://aurelien.boudoux.fr"
     },
     {
       "name": "Projet perso",
-      "url": "http://astread.com/"
+      "type": "website",
+      "link": "http://astread.com/"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "C#"
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "AurelienBoudoux",
-    "mail": ""
-  }
+  ]
 }

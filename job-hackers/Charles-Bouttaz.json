@@ -2,17 +2,20 @@
   "name": "Charles Bouttaz",
   "title": "Développeur Freelance",
   "picture": "images/charlesBoutaz.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Site web",
-      "url": "https://www.doyoubuzz.com/charles-bouttaz"
+      "type": "twitter",
+      "link": "https://twitter.com/CharlesBouttaz"
     },
     {
-      "name": "Linkedin",
-      "url": "https://fr.linkedin.com/in/charles-bouttaz-18289a39"
+      "type": "website",
+      "link": "https://www.doyoubuzz.com/charles-bouttaz"
+    },
+    {
+      "type": "linkedin",
+      "link": "https://fr.linkedin.com/in/charles-bouttaz-18289a39"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "Java",
     "Java EE",
@@ -30,9 +33,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "CharlesBouttaz",
-    "mail": "xxx@xxx.net"
-  }
+  ]
 }

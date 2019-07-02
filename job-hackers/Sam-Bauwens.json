@@ -4,35 +4,35 @@
     "Développeur .NET Indépendant",
   "picture":
     "images/Sam-Bauwens.png",
-  "websites": [
-    
+  "links": [
     {
-      "name": "Linkedin",
-      "url": "http://linkedin.com/in/sambauwens"
+      "type": "twitter",
+      "link": "https://twitter.com/sambauwens"
+    },
+    {
+      "type": "linkedin",
+      "link": "http://linkedin.com/in/sambauwens"
     },
     {
       "name": "Projet perso",
-      "url": "http://golf-mini.com/"
+      "type": "website",
+      "link": "http://golf-mini.com/"
     },
     {
-      "name": "Github",
-      "url": "https://github.com/sambauwens"
+      "type": "github",
+      "link": "https://github.com/sambauwens"
     },
     {
       "name": "Stackoverflow",
-      "url": "https://stackoverflow.com/users/124187/sam-bauwens"
+      "type": "website",
+      "link": "https://stackoverflow.com/users/124187/sam-bauwens"
     }
     
   ],
-  "location": "Lyon",
   "skills": [
     "ASP.NET MVC",
    "TDD",
    "C#"
   ],
-  "cities": ["Lyon"],
-  "contacts": {
-    "twitter": "sambauwens",
-    "mail": ""
-  }
+  "cities": ["Lyon"]
 }

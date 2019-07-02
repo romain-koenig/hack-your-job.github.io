@@ -4,31 +4,29 @@
     "Développeur .NET Indépendant",
   "picture":
     "images/Romain-Berthon.jpeg",
-  "websites": [
-    
+  "links": [
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/romain-berthon-254977101"
+      "type": "twitter",
+      "link": "https://twitter.com/RomainTrm"
     },
     {
-      "name": "Blog",
-      "url": "https://rberthon.wordpress.com/"
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/romain-berthon-254977101"
     },
     {
-      "name": "Github",
-      "url": "https://github.com/RomainTrm"
+      "type": "blog",
+      "link": "https://rberthon.wordpress.com/"
+    },
+    {
+      "type": "github",
+      "link": "https://github.com/RomainTrm"
     }
     
   ],
-  "location": "Lyon",
   "skills": [
     ".NET",
    "C#",
    "F#"
   ],
-  "cities": ["Lyon"],
-  "contacts": {
-    "twitter": "RomainTrm",
-    "mail": ""
-  }
+  "cities": ["Lyon"]
 }

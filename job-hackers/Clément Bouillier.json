@@ -2,30 +2,29 @@
   "name": "Clément Bouillier",
   "title": " Software Craftsmanship",
   "picture": "images/clémentBouiller.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Github",
-      "url": "https://github.com/devcrafting"
+      "type": "twitter",
+      "link": "https://twitter.com/clem_bouillier"
     },
     {
-      "name": "Blog",
-      "url": "http://www.devcrafting.com/"
+      "type": "github",
+      "link": "https://github.com/devcrafting"
     },
     {
-      "name": "Linkedin",
-      "url": "https://fr.linkedin.com/in/clementbouillier/fr"
+      "type": "blog",
+      "link": "http://www.devcrafting.com/"
+    },
+    {
+      "type": "linkedin",
+      "link": "https://fr.linkedin.com/in/clementbouillier/fr"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "Java",
     "Haskell"
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "twitter": "clem_bouillier",
-    "mail": "xxx@xxx.net"
-  }
+  ]
 }

@@ -2,21 +2,25 @@
   "name": "Gilles Figuière",
   "title": "Développeur logiciel et web indépendant",
   "picture": "images/GillesFiguiére.jpeg",
-  "websites": [
+  "links": [
     {
-      "name": "Github",
-      "url": "https://github.com/"
+      "type": "github",
+      "link": "https://github.com/"
     },
     {
-      "name": "Site web",
-      "url": "https://www.doyoubuzz.com/charles-bouttaz"
+      "type": "website",
+      "type": "website",
+      "link": "https://gillesfiguiere.com"
     },
     {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com/in/gillesfiguiere/"
+      "type": "mail",
+      "link": "mailto:me@gillesfiguiere.com"
+    },
+    {
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/gillesfiguiere/"
     }
   ],
-  "location": "Lyon",
   "skills": [
     "C#",
     "C++",
@@ -45,8 +49,5 @@
   ],
   "cities": [
     "Lyon"
-  ],
-  "contacts": {
-    "mail": "mr.gilles.figuiere@gmail.com"
-  }
+  ]
 }
