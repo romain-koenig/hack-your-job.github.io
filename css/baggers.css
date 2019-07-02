@@ -20,129 +20,103 @@
 }
 .city-menu.active .badge {
   background-color: white;
-  color: #0275D8;
+  color: var(--color-secondary);
 }
-
-.bagger {
-  /* border: solid 1px #ccc; */
+.members-container {
+  margin-top: 15px;
+  margin-right: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.member {
+  padding: 0;
   box-shadow: 0 0 10px 2px grey;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin: 1rem;
 }
 
-.bagger-header {
+.member-header {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-size: cover !important;
-  height: 150px;
   padding: 10px;
-  font-family: 'Lobster', cursive;
   font-size: 40px;
+  display: flex;
+  flex-grow: 1;
 }
-/* Image for the header of the bagger card */
-.bagger-header.aix-en-provence { background: url(../images/villes/aix-en-provence.jpg) no-repeat center center; }
-.bagger-header.avignon { background: url(../images/villes/avignon.jpg) no-repeat center center; color: white; }
-.bagger-header.bayonne { background: url(../images/villes/bayonne.jpg) no-repeat center center; }
-.bagger-header.bordeaux { background: url(../images/villes/bordeaux.jpg) no-repeat center center; color: white; }
-.bagger-header.brest { background: url(../images/villes/brest.jpg) no-repeat center center; }
-.bagger-header.caen { background: url(../images/villes/caen.jpg) no-repeat center center; }
-.bagger-header.clermont-ferrand { background: url(../images/villes/clermont-ferrand.jpg) no-repeat center center; }
-.bagger-header.epinal { background: url(../images/villes/epinal.jpg) no-repeat center center; }
-.bagger-header.grenoble { background: url(../images/villes/grenoble.jpg) no-repeat center center; }
-.bagger-header.le-mans { background: url(../images/villes/le-mans.jpg) no-repeat center center; color: white; }
-.bagger-header.lille { background: url(../images/villes/lille.jpg) no-repeat center center; color: white; }
-.bagger-header.lyon { background: url(../images/villes/lyon.jpg) no-repeat center center; color: white; }
-.bagger-header.montpellier { background: url(../images/villes/montpellier.jpg) no-repeat center center; color: white; }
-.bagger-header.montreal { background: url(../images/villes/montreal.jpg) no-repeat center center; color: white; }
-.bagger-header.nantes { background: url(../images/villes/nantes.jpg) no-repeat center center; color: white; }
-.bagger-header.paris { background: url(../images/villes/paris.jpg) no-repeat center center; }
-.bagger-header.rennes { background: url(../images/villes/rennes.jpg) no-repeat center center; }
-.bagger-header.rouen { background: url(../images/villes/rouen.jpg) no-repeat center center; color: white; }
-.bagger-header.saint-etienne { background: url(../images/villes/saint-etienne.jpg) no-repeat center center; color: white; }
-.bagger-header.sophia-antipolis { background: url(../images/villes/sophia-antipolis.jpg) no-repeat center center; }
-.bagger-header.strasbourg { background: url(../images/villes/strasbourg.jpg) no-repeat center center; color: white; }
-.bagger-header.toulon { background: url(../images/villes/toulon.jpg) no-repeat center center; }
-.bagger-header.toulouse { background: url(../images/villes/toulouse.jpg) no-repeat center center; color: white; }
-.bagger-header.tours { background: url(../images/villes/tours.jpg) no-repeat center center; color: white; }
-.bagger-header.vannes { background: url(../images/villes/vannes.jpg) no-repeat center center; color: white; }
-.bagger-header.versailles { background: url(../images/villes/versailles.jpg) no-repeat center center; color: white; }
-/* A FAIRE PLUS TARD (ville en seconde position au moins) */
-/*
-.bagger-header.belfort { background: url(../images/villes/belfort.jpg) no-repeat center center; }
-.bagger-header.besancon { background: url(../images/villes/besancon.jpg) no-repeat center center; }
-.bagger-header.biarritz { background: url(../images/villes/biarritz.jpg) no-repeat center center; }
-.bagger-header.chartres { background: url(../images/villes/chartres.jpg) no-repeat center center; }
-.bagger-header.mulhouse { background: url(../images/villes/mulhouse.jpg) no-repeat center center; }
-.bagger-header.nancy { background: url(../images/villes/nancy.jpg) no-repeat center center; }
-.bagger-header.orleans { background: url(../images/villes/orleans.jpg) no-repeat center center; }
-.bagger-header.saint-jean-de-luz { background: url(../images/villes/saint-jean-de-luz.jpg) no-repeat center center; }
-.bagger-header.san-sebastien { background: url(../images/villes/san-sebastien.jpg) no-repeat center center; }
-.bagger-header.saint-quentin-en-yvelines { background: url(../images/villes/saint-quentin-en-yvelines.jpg) no-repeat center center; }
-.bagger-header.vesoul { background: url(../images/villes/vesoul.jpg) no-repeat center center; }
-*/
-
-.bagger-picture {
+.member-header>*{
+  flex-basis: auto;
+}
+.member-picture-shadow {
+  /* filter: drop-shadow(0px 0px 8px grey); */
+}
+.member-picture {
   height: 150px;
   width: 150px;
   border-radius: 75px;
-  border: solid 8px #f7f7f9;
+  /* clip-path: polygon(20% 0%, 100% 0, 80% 100%, 0% 100%); */
+  /* clip-path: circle(50% at 50% 50%); */
+  /* box-shadow: 0 0 8px 8px grey; */
+  /* border: 4px solid grey; */
   overflow: hidden;
-  display: inline-block;
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 128;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
-.bagger-picture img {
+.member-picture img {
+  width: 100%;
+  height: auto;
 }
-
-.bagger-name a {
+.member-bio {
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-left: 1rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.member-name {
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+.member-title {
+  font-size: 1.5rem;
+}
+.member-location {
+  font-size: 1.3rem;
+}
+.member-name a {
   color: black;
   font-size: 30px;
   font-family: 'Lobster', cursive;
 }
-.bagger-name a:hover {
+.member-name a:hover {
   text-decoration: none;
 }
-.bagger-name a:hover:before {
+.member-name a:hover:before {
   content: '\f0c1';
   font-size: 80%;
   color: #ccc;
   margin-right: 5px;
   font-family: FontAwesome;
 }
-
-.bagger-bio {
-  padding: 30px 1em 1em 1em;
+.member-skills {
 }
-
-.bagger-presentations {
-  border-top: solid 1px #ccc;
+.member-links {
+  font-size: 1.5rem;
 }
-.bagger-presentations span.badge {
-  margin-left: 5px;
-}
-.bagger-session-title {
-  cursor: pointer;
-}
-.bagger-session-abstract {
-  margin-top: 5px;
-  padding-top: 5px;
-  padding-left: 10px;
-}
-.bagger-session-abstract blockquote.blockquote {
-  font-size: inherit;
-}
-
-
-.bagger-links {
+.member-skills,
+.member-links {
   border-top: solid 1px #ccc;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #f7f7f9;
   padding: 1em;
 }
-.bagger-links > span {
+.member-links a {
+  color: var(--color-secondary);
+}
+.member-skills > span,
+.member-links > span {
   margin-right: 10px;
 }
 
@@ -220,7 +194,7 @@
 :root {
   --color-bg: #292B2C;
   --color-primary: #EF5B7E;
-  --color-secondary: #59C2AA;
+  --color-secondary: #5bc0de;
   --font-family: 'Fredoka One', sans-serif;
   --animation-speed: 10s;
 }
@@ -245,4 +219,9 @@
 }
 .inverse-cloak:not([v-cloak]) {
   display: none;
+}
+
+.active {
+  background-color: var(--color-secondary)!important;
+  border-color: var(--color-secondary)!important;
 }

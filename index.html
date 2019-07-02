@@ -2,41 +2,50 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="fr">
+<!--<![endif]-->
+
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Les membres de Hack your job</title>
 
   <meta name="description" content="La liste des membres de Hack your job par villes et par compétences" />
 
-  <link rel="icon" href="favicon.ico"/>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-  <link rel="stylesheet" media="screen" href="css/baggers.css"/>
+  <link rel="stylesheet" media="screen" href="css/baggers.css" />
 
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+    integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
 
   <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 
   <script type="text/javascript">
-/*
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-38399904-1']);
-    _gaq.push(['_trackPageview']);
+    /*
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38399904-1']);
+        _gaq.push(['_trackPageview']);
 
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    */
-    </script>
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        */
+  </script>
 </head>
 
 <body>
@@ -49,11 +58,8 @@
         </ul>
         <form class="form-inline">
           <div class="input-group">
-            <input type="text"
-                   class="form-control"
-                   style="width: 350px"
-                   placeholder="Chercher un(e) job hacker, une technologie..."
-                   v-model="filtering">
+            <input type="text" class="form-control" style="width: 350px"
+              placeholder="Chercher un(e) job hacker, une technologie..." v-model="filtering">
             <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
           </div>
         </form>
@@ -63,7 +69,7 @@
     <div class="container-fluid main-container">
 
       <div class="row loading-message inverse-cloak" v-cloak>
-        <div class="col-12" >
+        <div class="col-12">
           <h1>Nous retrouvons la liste des job hackers... Une petite minute !</h1>
 
           <div class="sk-cube-grid">
@@ -83,79 +89,74 @@
       <div class="row" v-cloak>
         <!-- Liste des villes -->
         <div class="col-sm-2 cities-group">
-            <ul class="list-group cities-list">
-              <li class="list-group-item list-group-item-inverse cities-title">Choisissez une ville</li>
-              <li class="list-group-item justify-content-between list-group-item-action city-menu"
-                  :class="{ active: selectedCity === null }"
-                  @click="selectedCity = null">
-                Toutes les villes <span class="badge badge-primary badge-pill">{{ members.length }}</span>
-              </li>
-              <li class="list-group-item justify-content-between list-group-item-action city-menu"
-                  :class="{ active: selectedCity === city.name }"
-                  v-for="city in cities"
-                  @click="selectedCity = city.name">
-                {{ city.name }}
-                <span class="badge badge-primary badge-pill">{{ city.members }}</span>
-              </li>
-            </ul>
+          <ul class="list-group cities-list">
+            <li class="list-group-item list-group-item-inverse cities-title">Choisissez une ville</li>
+            <li class="list-group-item justify-content-between list-group-item-action city-menu"
+              :class="{ active: selectedCity === null }" @click="selectedCity = null">
+              Toutes les villes <span class="badge badge-info badge-pill">{{ members.length }}</span>
+            </li>
+            <li class="list-group-item justify-content-between list-group-item-action city-menu"
+              :class="{ active: selectedCity === city.name }" v-for="city in cities" @click="selectedCity = city.name">
+              {{ city.name }}
+              <span class="badge badge-info badge-pill">{{ city.members }}</span>
+            </li>
+          </ul>
 
-            <ul class="list-group cities-list">
-              <li class="list-group-item list-group-item-inverse cities-title">Choisissez une compétence</li>
-              <li class="list-group-item justify-content-between list-group-item-action city-menu"
-                  :class="{ active: selectedSkill === null }"
-                  @click="selectedSkill = null">
-                Toutes les compétences <span class="badge badge-primary badge-pill">{{ members.length }}</span>
-              </li>
-              <li class="list-group-item justify-content-between list-group-item-action city-menu"
-                  :class="{ active: selectedSkill === skill.name }"
-                  v-for="skill in skills"
-                  @click="selectedSkill = skill.name">
-                {{ skill.name }}
-                <span class="badge badge-primary badge-pill">{{ skill.members }}</span>
-              </li>
-            </ul>
+          <ul class="list-group cities-list">
+            <li class="list-group-item list-group-item-inverse cities-title">Choisissez une compétence</li>
+            <li class="list-group-item justify-content-between list-group-item-action city-menu"
+              :class="{ active: selectedSkill === null }" @click="selectedSkill = null">
+              Toutes les compétences <span class="badge badge-info badge-pill">{{ members.length }}</span>
+            </li>
+            <li class="list-group-item justify-content-between list-group-item-action city-menu"
+              :class="{ active: selectedSkill === skill.name }" v-for="skill in skills"
+              @click="selectedSkill = skill.name">
+              {{ skill.name }}
+              <span class="badge badge-info badge-pill">{{ skill.members }}</span>
+            </li>
+          </ul>
 
-          </div>
+        </div>
         <div class="col-10 col-sm-10">
 
           <div class="row" v-if="membersFilteredCount === 0">
             <div class="col-12">
-              <h4><i class="fa fa-search text-danger"></i> Aucune personne correspondante à vos critères n'a été trouvée...</h4>
+              <h4><i class="fa fa-search text-danger"></i> Aucune personne correspondante à vos critères n'a été
+                trouvée...</h4>
             </div>
           </div>
 
           <!-- Liste (filtrée) des job hackers... -->
-          <div class="row justify-content-center">
-            <div v-for="member in displayedMembers" class="col-sm-6 col-xs-12">
-              <div class="bagger">
-                <a :id="member.id"></a>
-                <div class="bagger-header">
-                  <div class="bagger-picture">
-                    <img class="img-fluid" :src="member.picture ? member.picture : 'images/hackyourjob.png'">
-                  </div>
-                </div>
-
-                <div class="bagger-bio">
-                  <div class="row">
-                    <div class="col-xs-8 col-sm-9">
-                      <h4 class="bagger-name"><a :href="'#' + member.id">{{ member.name }}</a></h4>
-                      <p v-html="member.bio"></p>
+          <div class="members-container">
+            <div :id="member.id" v-for="member in displayedMembers" class="member d-flex flex-column">
+                <div class="member-header">
+                  <div class="member-picture-shadow">
+                    <div class="member-picture">
+                      <img :src="member.picture ? member.picture : 'images/hackyourjob.png'">
                     </div>
                   </div>
-                  <span class="text-muted"><i class="fa fa-map-marker"></i> {{ member.location }}</span>
+                  <div class="member-bio">
+                    <h4 class="member-name">{{ member.name }}</h4>
+                    <p class="member-title" v-html="member.title"></p>
+                    <p class="member-location text-muted"><i class="fa fa-map-marker"></i> {{ member.location }}</p>
+                  </div>
                 </div>
 
-                <div class="bagger-links">
-                    <span v-for="skill in member.skills" class="badge badge-pill badge-info">{{ skill }}</span>
+                <div class="member-skills">
+                  <span v-for="skill in member.skills" class="badge badge-pill badge-info">{{ skill }}</span>
                 </div>
-                <div class="bagger-links">
+                <div class="member-links">
                   <span v-if="member.contacts.twitter">
-                    <a :href="'https://twitter.com/' + member.contacts.twitter" target="_blank"><i class="fa fa-twitter"></i> @{{ member.contacts.twitter }}</a>
+                    <a :title="member.contacts.twitter" :href="'https://twitter.com/' + member.contacts.twitter" target="_blank"><i
+                        class="fa fa-twitter-square"></i></a>
+                  </span>
+                  <span v-if="member.contacts.linkedin">
+                    <a :href="member.contacts.linkedin" target="_blank"><i class="fa fa-linkedin"></i>
+                    </a>
                   </span>
                   <span v-for="site in member.websites">
                     <a :href="site.url" target="_blank"><i class="fa fa-globe"></i> {{ site.name }}</a>
                   </span>
-                </div>
               </div>
             </div>
           </div>
@@ -165,7 +166,8 @@
     </div>
 
     <div class="copyrights text-right">
-      <i class="fa fa-creative-commons"></i> Site forké à partir de <a href="https://github.com/brownbaglunch/BrownBagLunch">brown bag lunch</a>
+      <i class="fa fa-creative-commons"></i> Site forké à partir de <a
+        href="https://github.com/brownbaglunch/BrownBagLunch">brown bag lunch</a>
     </div>
   </div>
 
@@ -175,10 +177,12 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="https://www.hackyourjob.com/" target="_blank"><i class="fa fa-github-alt"></i> Rejoignez la communauté Hack your job</a>
+          <a class="nav-link" href="https://www.hackyourjob.com/" target="_blank"><i class="fa fa-github-alt"></i>
+            Rejoignez la communauté Hack your job</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/HackYrJob" target="_blank"><i class="fa fa-twitter"></i> @HackYrJob</a>
+          <a class="nav-link" href="https://twitter.com/HackYrJob" target="_blank"><i class="fa fa-twitter"></i>
+            @HackYrJob</a>
         </li>
       </ul>
     </div>
@@ -187,4 +191,5 @@
   <!-- ... then start the VueJS application. -->
   <script src="js/vue-app.js"></script>
 </body>
+
 </html>
