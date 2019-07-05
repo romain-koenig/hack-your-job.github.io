@@ -24,8 +24,14 @@
     "DDD",
     "Event Sourcing",
     "CQRS",
-    ".Net Core (F#)",
-    "Fable"
+    ".Net Core",
+    "fsharp (F#)",
+    "csharp (C#)",
+    "WPF",
+    "Fable",
+    "Javascript (JS)",
+    "Coaching",
+    "Formation"
   ],
   "cities": [
     "Lyon"
