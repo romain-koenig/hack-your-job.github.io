@@ -47,10 +47,10 @@ const getMembers = function () {
 
 const memberContains = function (member, token) {
   if (!member) return false;
-  if (caseNonSensitiveContains(member.name, token)) return true
-  if (caseNonSensitiveContains(member.title, token)) return true
+  if (caseNonSensitiveLocaleContains(member.name, token)) return true
+  if (caseNonSensitiveLocaleContains(member.title, token)) return true
   for (let skill of member.skills) {
-    if (caseNonSensitiveContains(skill, token)) return true
+    if (caseNonSensitiveLocaleContains(skill, token)) return true
   }
   return false
 }
@@ -64,8 +64,8 @@ const caseNonSensitiveLocaleContains = function (string, token) {
   let tokenFound = false
   let currentCharIndex = 0
 
-  while (!tokenFound && currentCharIndex <= lowerString.length() - lowerToken.length()) {
-    tokenFound = lowerString.substring(currentCharIndex).localeCompare(lowerToken)
+  while (!tokenFound && currentCharIndex <= lowerString.length - lowerToken.length) {
+    tokenFound = lowerString.substring(currentCharIndex, currentCharIndex + lowerToken.length).localeCompare(lowerToken, 'en', {sensitivity: 'base'}) == 0
     currentCharIndex++
   }
 
