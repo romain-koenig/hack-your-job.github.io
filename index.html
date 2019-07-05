@@ -46,7 +46,7 @@
   <div id="app-vue">
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse sticky-top">
       <span class="logo"><img src="images/hackyourjob.png" alt="Logo Hack Your Job"></span>
-      <a class="navbar-brand" href="#">Hack your job : {{ membersFilteredCount }} membres</h1></a>
+      <a class="navbar-brand" href="#">Hack your job : {{ membersFilteredCount }} membres</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
@@ -60,69 +60,70 @@
       </div>
     </nav>
 
-    <div class="container-fluid main-container">
+    <div class="row loading-message inverse-cloak" v-cloak>
+      <div class="col-12">
+        <h1>Nous retrouvons la liste des job hackers... Une petite minute !</h1>
 
-      <div class="row loading-message inverse-cloak" v-cloak>
-        <div class="col-12">
-          <h1>Nous retrouvons la liste des job hackers... Une petite minute !</h1>
-
-          <div class="sk-cube-grid">
-            <div class="sk-cube sk-cube1"></div>
-            <div class="sk-cube sk-cube2"></div>
-            <div class="sk-cube sk-cube3"></div>
-            <div class="sk-cube sk-cube4"></div>
-            <div class="sk-cube sk-cube5"></div>
-            <div class="sk-cube sk-cube6"></div>
-            <div class="sk-cube sk-cube7"></div>
-            <div class="sk-cube sk-cube8"></div>
-            <div class="sk-cube sk-cube9"></div>
-          </div>
+        <div class="sk-cube-grid">
+          <div class="sk-cube sk-cube1"></div>
+          <div class="sk-cube sk-cube2"></div>
+          <div class="sk-cube sk-cube3"></div>
+          <div class="sk-cube sk-cube4"></div>
+          <div class="sk-cube sk-cube5"></div>
+          <div class="sk-cube sk-cube6"></div>
+          <div class="sk-cube sk-cube7"></div>
+          <div class="sk-cube sk-cube8"></div>
+          <div class="sk-cube sk-cube9"></div>
         </div>
       </div>
+    </div>
 
-      <div class="row" v-cloak>
-        <!-- Liste des villes -->
-        <div class="col-md-2 cities-group">
-          <ul class="list-group cities-list">
-            <li class="list-group-item list-group-item-inverse cities-title">Choisissez une ville</li>
-            <li class="list-group-item justify-content-between list-group-item-action city-menu"
-              :class="{ active: selectedCity === null }" @click="selectedCity = null">
-              Toutes les villes <span class="badge badge-info badge-pill">{{ members.length }}</span>
-            </li>
-            <li class="list-group-item justify-content-between list-group-item-action city-menu"
-              :class="{ active: selectedCity === city.name }" v-for="city in cities" @click="selectedCity = city.name">
-              {{ city.name }}
-              <span class="badge badge-info badge-pill">{{ city.members }}</span>
-            </li>
-          </ul>
+    <div class="row no-gutters" v-cloak>
+      <!-- Liste des villes -->
+      <div class="col-md-2 cities-group">
+        <ul class="list-group cities-list">
+          <li class="list-group-item list-group-item-inverse cities-title">Choisissez une ville</li>
+          <li class="list-group-item justify-content-between list-group-item-action city-menu"
+            :class="{ active: selectedCity === null }" @click="selectedCity = null">
+            Toutes les villes <span class="badge badge-info badge-pill">{{ members.length }}</span>
+          </li>
+          <li class="list-group-item justify-content-between list-group-item-action city-menu"
+            :class="{ active: selectedCity === city.name }" v-for="city in cities" @click="selectedCity = city.name">
+            {{ city.name }}
+            <span class="badge badge-info badge-pill">{{ city.members }}</span>
+          </li>
+        </ul>
 
-          <ul class="list-group cities-list">
-            <li class="list-group-item list-group-item-inverse cities-title">Choisissez une compétence</li>
-            <li class="list-group-item justify-content-between list-group-item-action city-menu"
-              :class="{ active: selectedSkill === null }" @click="selectedSkill = null">
-              Toutes les compétences <span class="badge badge-info badge-pill">{{ members.length }}</span>
-            </li>
-            <li class="list-group-item justify-content-between list-group-item-action city-menu"
-              :class="{ active: selectedSkill === skill.name }" v-for="skill in skills"
-              @click="selectedSkill = skill.name">
-              {{ skill.name }}
-              <span class="badge badge-info badge-pill">{{ skill.members }}</span>
-            </li>
-          </ul>
+        <ul class="list-group cities-list">
+          <li class="list-group-item list-group-item-inverse cities-title">Choisissez une compétence</li>
+          <li class="list-group-item justify-content-between list-group-item-action city-menu"
+            :class="{ active: selectedSkill === null }" @click="selectedSkill = null">
+            Toutes les compétences <span class="badge badge-info badge-pill">{{ members.length }}</span>
+          </li>
+          <li class="list-group-item justify-content-between list-group-item-action city-menu"
+            :class="{ active: selectedSkill === skill.name }" v-for="skill in skills"
+            @click="selectedSkill = skill.name">
+            {{ skill.name }}
+            <span class="badge badge-info badge-pill">{{ skill.members }}</span>
+          </li>
+        </ul>
 
-        </div>
-        <div class="col-md-10">
+      </div>
+      <div class="col-md-10">
 
-          <div class="row" v-if="membersFilteredCount === 0">
-            <div class="col-12">
-              <h4><i class="fa fa-search text-danger"></i> Aucune personne correspondante à vos critères n'a été
-                trouvée...</h4>
-            </div>
+        <div class="row no-member-screen no-gutters" v-if="membersFilteredCount === 0">
+          <div class="col-12 d-flex align-items-center justify-content-center text-center">
+            <h4>
+              <i class="fa fa-search text-danger"></i>
+              Aucune personne ne correspond à vos critères de recherche...
+            </h4>
           </div>
+        </div>
 
-          <!-- Liste (filtrée) des job hackers... -->
-          <div class="members-container">
-            <div :id="member.id" v-for="member in displayedMembers" class="member d-flex flex-column">
+        <!-- Liste (filtrée) des job hackers... -->
+        <div class="members-container row no-gutters">
+          <div v-for="member in displayedMembers" class="col-xs-12 col-md-6 col-xl-3 d-flex">
+            <div :id="member.id" class="member">
               <div class="member-header">
                 <div class="member-picture-shadow">
                   <div class="member-picture">
@@ -157,11 +158,8 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
-
 
     <!-- Footer -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
@@ -176,14 +174,14 @@
             <a class="nav-link" href="https://twitter.com/HackYrJob" target="_blank"><i class="fab fa-twitter"></i>
               @HackYrJob</a>
           </li>
+        </ul>
+        <div class="ml-auto copyrights text-right">
+          <i class="fab fa-creative-commons"></i> Forké à partir de <a
+            href="https://github.com/brownbaglunch/BrownBagLunch">brown bag lunch</a>
+        </div>
       </div>
-      </ul>
-      <div class="ml-auto copyrights text-right">
-        <i class="fab fa-creative-commons"></i> Forké à partir de <a
-          href="https://github.com/brownbaglunch/BrownBagLunch">brown bag lunch</a>
-      </div>
+    </nav>
   </div>
-  </nav>
 
   <!-- ... then start the VueJS application. -->
   <script src="js/vue-app.js"></script>
