@@ -1,6 +1,6 @@
 'use strict'
 
-const getMembers = function() {
+const getMembers = function () {
 
   const vueData = this
 
@@ -45,6 +45,33 @@ const getMembers = function() {
   })
 }
 
+const memberContains = function (member, token) {
+  if (!member) return false;
+  if (caseNonSensitiveContains(member.name, token)) return true
+  if (caseNonSensitiveContains(member.title, token)) return true
+  for (let skill of member.skills) {
+    if (caseNonSensitiveContains(skill, token)) return true
+  }
+  return false
+}
+
+const caseNonSensitiveLocaleContains = function (string, token) {
+  if (token.length > string.length) return false
+
+  const lowerString = string.toLowerCase()
+  const lowerToken = token.toLowerCase()
+
+  let tokenFound = false
+  let currentCharIndex = 0
+
+  while (!tokenFound && currentCharIndex <= lowerString.length() - lowerToken.length()) {
+    tokenFound = lowerString.substring(currentCharIndex).localeCompare(lowerToken)
+    currentCharIndex++
+  }
+
+  return tokenFound
+}
+
 new Vue({
   el: '#app-vue',
   mounted: getMembers,
@@ -87,7 +114,7 @@ new Vue({
         if (this.selectedSkill && member.skills.indexOf(this.selectedSkill) === -1) {
           return false;
         }
-        return JSON.stringify(member).toLowerCase().indexOf(filter) > -1;
+        return memberContains(member, filter)
       }.bind(this));
       this.membersFilteredCount = filteredList.length;
       return filteredList;
