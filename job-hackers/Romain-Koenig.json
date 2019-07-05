@@ -1,0 +1,26 @@
+{
+  "name": "Romain Kœnig",
+  "title": "RSI en temps partagé",
+  "picture": "images/romainKoenig.jpeg",
+  "links": [
+
+    {
+      "type": "linkedin",
+      "link": "https://www.linkedin.com/in/romainkoenig/"
+    }
+  ],
+  "skills": [
+    "Management",
+    "Gestion de projets",
+    "Benchmarking",
+    "Audit",
+    "Scrum", 
+    "AWS IoT",
+    "Azure IoT",
+    "Reconnaissance vocale"
+    
+  ],
+  "cities": [
+    "Lyon"
+  ]
+}
