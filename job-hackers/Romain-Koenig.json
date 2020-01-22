@@ -3,7 +3,14 @@
   "title": "RSI en temps partagé",
   "picture": "images/romainKoenig.jpeg",
   "links": [
-
+    {
+      "type": "twitter",
+      "link": "https://twitter.com/kromaticfr"
+    },
+    {
+      "type": "website",
+      "link": "https://kromatic.fr/"
+    },
     {
       "type": "linkedin",
       "link": "https://www.linkedin.com/in/romainkoenig/"
